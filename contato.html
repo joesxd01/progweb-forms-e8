@@ -1,12 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>padaria do bairro - contato</title>
+    <meta charset="utf-8" />
+    <title>Formulário de Contato</title>
 </head>
+
 <body>
-    <h1>contato</h1>
-    <a href="index.html">voltar ao inicio</a>
+    <main>
+        <header>
+            <h2>✉️ Formulário de Contato Geral</h2>
+            <p>
+                Preencha os campos obrigatórios (<abbr title="Obrigatório">*</abbr>) e
+                envie sua mensagem.
+            </p>
+        </header>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>👤 Dados de Contato</legend>
+
+                <div>
+                    <label for="nome">Nome completo <abbr title="Obrigatório">*</abbr></label>
+
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name"
+                        required />
+                </div>
+
+                <div>
+                    <label for="email">Email <abbr title="Obrigatório">*</abbr></label>
+
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email"
+                        required />
+                </div>
+
+                <div>
+                    <label for="telefone">Telefone (opcional)</label>
+
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678" inputmode="tel"
+                        autocomplete="tel" pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+                        title="Use um número brasileiro válido, por exemplo: (11) 91234-5678" />
+                    <small id="tel-ajuda">Formato aceito: (DD) 9XXXX-XXXX ou (DD) XXXX-XXXX.</small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>📝 Detalhes da Mensagem</legend>
+
+                <div>
+                    <label for="assunto">📋 Assunto <abbr title="Obrigatório">*</abbr></label>
+
+                    <select id="assunto" name="assunto" required>
+                        <option value="" disabled selected>Selecione um assunto</option>
+                        <option>ℹ️ Informações gerais</option>
+                        <option>⚠️ Reclamação</option>
+                        <option>💡 Sugestão</option>
+                        <option>🌟 Elogio</option>
+                        <option>🎂 Pedido especial</option>
+                        <option>❓ Outros</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensagem">✍️ Mensagem <abbr title="Obrigatório">*</abbr></label>
+                    
+
+                    <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." rows="6"
+                        minlength="10" required></textarea>
+                    <small>Mínimo de 10 caracteres.</small>
+                </div>
+            </fieldset>
+
+            <p>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </p>
+        </form>
+
+        <footer>
+            <p>
+                <small>Campos marcados com <abbr title="Obrigatório">*</abbr> são
+                    obrigatórios.</small>
+            </p>
+        </footer>
+    </main>
 </body>
+
 </html>
